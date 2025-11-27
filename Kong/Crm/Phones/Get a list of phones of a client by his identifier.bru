@@ -1,0 +1,25 @@
+meta {
+  name: Get a list of phones of a client by his identifier
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/crm/api/v2/Clients/:clientId/Phones
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~readOnly: 
+  ~sortingRules: 
+}
+
+params:path {
+  clientId: 
+}
+
+headers {
+  apiroute: {{apiRoute}}
+  apikey: {{apiKey}}
+}

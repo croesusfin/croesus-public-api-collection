@@ -1,0 +1,28 @@
+meta {
+  name: Get a list of accounts by relationship id
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/crm/api/v2/Relationships/:relationshipId/Accounts
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~requestedCurrency: 
+  ~sortingRules: 
+  ~after: 
+  ~before: 
+  ~pageLimit: 
+}
+
+params:path {
+  relationshipId: 
+}
+
+headers {
+  apiroute: {{apiRoute}}
+  apikey: {{apiKey}}
+}

@@ -1,0 +1,29 @@
+meta {
+  name: Create a note for a given parent context id
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/crm/api/v2/:contextType/:contextId/Notes
+  body: json
+  auth: inherit
+}
+
+params:path {
+  contextType: 
+  contextId: 
+}
+
+headers {
+  apiroute: {{apiRoute}}
+  apikey: {{apiKey}}
+}
+
+body:json {
+  {
+    "Comment": "",
+    "DateEffective": "",
+    "IsReview": false
+  }
+}

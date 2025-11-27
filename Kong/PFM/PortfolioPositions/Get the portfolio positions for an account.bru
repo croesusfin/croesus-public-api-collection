@@ -1,0 +1,25 @@
+meta {
+  name: Get the portfolio positions for an account
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/pfm/api/v1/accounts/:accountId/portfolio/positions
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~requestedCurrency: 
+  ~sortOrder: 
+}
+
+params:path {
+  accountId: 
+}
+
+headers {
+  apiroute: {{apiRoute}}
+  apikey: {{apiKey}}
+}

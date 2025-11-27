@@ -1,0 +1,21 @@
+meta {
+  name: Retrieves a detailed transaction by its unique identifier.
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/pfm/api/v1/accounts/:accountId/transactions/:transactionId/detailed
+  body: none
+  auth: inherit
+}
+
+params:path {
+  accountId: 
+  transactionId: 
+}
+
+headers {
+  apiroute: {{apiRoute}}
+  apikey: {{apiKey}}
+}

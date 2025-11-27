@@ -1,0 +1,25 @@
+meta {
+  name: Retrieves the net investment details for a specified account.
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/pfm/api/v1/accounts/:accountId/portfolio/netinvestment
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~portfolioDate: 
+  ~considerManagementStartDate: 
+}
+
+params:path {
+  accountId: 
+}
+
+headers {
+  apiroute: {{apiRoute}}
+  apikey: {{apiKey}}
+}

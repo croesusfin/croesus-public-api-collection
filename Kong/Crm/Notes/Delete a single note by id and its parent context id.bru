@@ -1,0 +1,22 @@
+meta {
+  name: Delete a single note by id and its parent context id
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{baseUrl}}/crm/api/v2/:contextType/:contextId/Notes/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  contextType: 
+  contextId: 
+  id: 
+}
+
+headers {
+  apiroute: {{apiRoute}}
+  apikey: {{apiKey}}
+}

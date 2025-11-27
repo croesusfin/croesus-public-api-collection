@@ -1,0 +1,84 @@
+meta {
+  name: Auth
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/connect/token
+  body: formUrlEncoded
+  auth: none
+}
+
+headers {
+  apikey: {{apiKey}}
+  apiroute: {{apiRoute}}
+}
+
+body:form-urlencoded {
+  grant_type: jwt-bearer
+  client_id: {{clientId}}
+  client_secret: {{clientSecret}}
+  assertion: {{assertion}}
+}
+
+script:pre-request {
+  const crypto = require('crypto');
+  
+    
+  var header ={
+      'alg': 'RS256',
+      'typ': 'JWT',
+  };
+  
+  var payload = {
+      iss: bru.getEnvVar('iss'),
+      sub: bru.getEnvVar('sub'),
+      iat: Math.floor(Date.now() / 1000),
+      exp: Math.floor(Date.now() / 1000) + 3600,
+  }
+  
+  function encode(obj) {
+    return Buffer.from(JSON.stringify(obj))
+      .toString('base64')
+      .replace(/=/g, '')
+      .replace(/\+/g, '-')
+      .replace(/\//g, '_');
+  }
+  
+  // build token
+  const encodedHeader = encode(header);
+  const encodedPayload = encode(payload);
+  const data = encodedHeader + "."+ encodedPayload;
+  
+  // sign token
+  const sign = crypto.createSign('RSA-SHA256');
+  sign.update(data);
+  sign.end();
+  const signature = sign.sign(bru.getEnvVar('privateKey'));
+  
+  const encodedSignature = signature
+    .toString('base64')
+    .replace(/=/g, '')
+    .replace(/\+/g, '-')
+    .replace(/\//g, '_');
+  
+  var signed = data + "." + encodedSignature;
+  
+  bru.setEnvVar('assertion',signed)
+}
+
+script:post-response {
+  var data = res.getBody();
+  
+  bru.setEnvVar("token", data.access_token);
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  Get bearer token
+}

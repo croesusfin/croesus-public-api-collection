@@ -1,0 +1,28 @@
+meta {
+  name: Get a list of simplifid clients based on the filters sent
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/crm/api/v2/Clients/Simplified
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~clientIds: 
+  ~clientNumbers: 
+  ~investmentAdvisorCodes: 
+  ~clientCurrency: 
+  ~shortName: 
+  ~after: 
+  ~before: 
+  ~pageLimit: 
+  ~sortingRules: 
+}
+
+headers {
+  apiroute: {{apiRoute}}
+  apikey: {{apiKey}}
+}

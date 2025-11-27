@@ -1,0 +1,25 @@
+meta {
+  name: Relationships - Breakdown of a selected portfolio
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/pfm/api/v1/relationships/:relationshipId/portfolio/assetAllocations/positions
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~requestedCurrency: 
+  ~assetAllocationId: 
+}
+
+params:path {
+  relationshipId: 
+}
+
+headers {
+  apiroute: {{apiRoute}}
+  apikey: {{apiKey}}
+}

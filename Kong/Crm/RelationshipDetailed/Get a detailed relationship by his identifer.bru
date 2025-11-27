@@ -1,0 +1,24 @@
+meta {
+  name: Get a detailed relationship by his identifer
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/crm/api/v2/Relationships/:relationshipId/Detailed
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~requestedCurrency: 
+}
+
+params:path {
+  relationshipId: 
+}
+
+headers {
+  apiroute: {{apiRoute}}
+  apikey: {{apiKey}}
+}

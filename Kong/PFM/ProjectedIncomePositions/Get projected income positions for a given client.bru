@@ -1,0 +1,24 @@
+meta {
+  name: Get projected income positions for a given client
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/pfm/api/v1/clients/:clientId/portfolio/projectedincome/positions
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~requestedCurrency: 
+}
+
+params:path {
+  clientId: 
+}
+
+headers {
+  apiroute: {{apiRoute}}
+  apikey: {{apiKey}}
+}

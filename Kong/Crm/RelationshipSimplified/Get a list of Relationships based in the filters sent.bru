@@ -1,0 +1,29 @@
+meta {
+  name: Get a list of Relationships based in the filters sent
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/crm/api/v2/Relationships/Simplified
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~relationshipNumbers: 
+  ~relationshipIds: 
+  ~investmentAdvisorCodes: 
+  ~relationshipCurrency: 
+  ~shortName: 
+  ~relationshipTypeDescription: 
+  ~after: 
+  ~before: 
+  ~pageLimit: 
+  ~sortingRules: 
+}
+
+headers {
+  apiroute: {{apiRoute}}
+  apikey: {{apiKey}}
+}
