@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "name": "Kong",
+  "name": "Croesus",
   "type": "collection",
   "ignore": [
     "node_modules",
