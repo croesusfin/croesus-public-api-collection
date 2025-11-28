@@ -1,0 +1,25 @@
+meta {
+  name: Get the Projected Income for each asset class of a selected portfolio for the coming 12 months following the call’s date for a given client
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/pfm/api/v1/clients/:clientId/portfolio/projectedincome/assetclasses
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~requestedCurrency: 
+  ~assetAllocationId: 
+}
+
+params:path {
+  clientId: 
+}
+
+headers {
+  apiroute: {{apiRoute}}
+  apikey: {{apiKey}}
+}

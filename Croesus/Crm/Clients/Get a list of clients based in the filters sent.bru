@@ -1,0 +1,33 @@
+meta {
+  name: Get a list of clients based in the filters sent
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/crm/api/v2/Clients
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~clientIds: 
+  ~clientNumbers: 
+  ~investmentAdvisorCodes: 
+  ~clientCurrency: 
+  ~requestedCurrency: 
+  ~accountIds: 
+  ~relationshipIds: 
+  ~shortName: 
+  ~totalValueGT: 
+  ~totalValueLT: 
+  ~after: 
+  ~before: 
+  ~pageLimit: 
+  ~sortingRules: 
+}
+
+headers {
+  apiroute: {{apiRoute}}
+  apikey: {{apiKey}}
+}

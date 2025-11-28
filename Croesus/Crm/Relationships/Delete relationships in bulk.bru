@@ -1,0 +1,21 @@
+meta {
+  name: Delete relationships in bulk
+  type: http
+  seq: 7
+}
+
+delete {
+  url: {{baseUrl}}/crm/api/v2/Relationships/bulk
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~relationshipIds: 
+  ~forceDelete: 
+}
+
+headers {
+  apiroute: {{apiRoute}}
+  apikey: {{apiKey}}
+}

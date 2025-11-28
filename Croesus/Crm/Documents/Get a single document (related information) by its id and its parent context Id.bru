@@ -1,0 +1,22 @@
+meta {
+  name: Get a single document (related information) by its id and its parent context Id
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/crm/api/v2/:contextType/:contextId/Documents/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  contextType: 
+  contextId: 
+  id: 
+}
+
+headers {
+  apiroute: {{apiRoute}}
+  apikey: {{apiKey}}
+}

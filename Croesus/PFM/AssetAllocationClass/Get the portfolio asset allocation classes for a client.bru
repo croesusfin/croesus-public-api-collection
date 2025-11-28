@@ -1,0 +1,25 @@
+meta {
+  name: Get the portfolio asset allocation classes for a client
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/pfm/api/v1/clients/:clientId/portfolio/assetAllocations/assetClasses
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~requestedCurrency: 
+  ~includeFundAllocation: 
+}
+
+params:path {
+  clientId: 
+}
+
+headers {
+  apiroute: {{apiRoute}}
+  apikey: {{apiKey}}
+}

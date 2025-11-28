@@ -1,0 +1,30 @@
+meta {
+  name: Retrieves the portfolio performance data for a specific account.
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/pfm/api/v1/accounts/:accountId/portfolio/performances
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~calculationMethod: 
+  ~cumulativePeriods: 
+  ~fixedPeriods: 
+  ~requestedCurrency: 
+  ~considerManagementStartDate: 
+  ~includeInflowOutflowRevenue: 
+  ~includeNonAnnualizedValues: 
+}
+
+params:path {
+  accountId: 
+}
+
+headers {
+  apiroute: {{apiRoute}}
+  apikey: {{apiKey}}
+}

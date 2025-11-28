@@ -1,0 +1,20 @@
+meta {
+  name: Update a single relationship using a relationship id
+  type: http
+  seq: 6
+}
+
+patch {
+  url: {{baseUrl}}/crm/api/v2/Relationships/:relationshipId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  relationshipId: 
+}
+
+headers {
+  apiroute: {{apiRoute}}
+  apikey: {{apiKey}}
+}

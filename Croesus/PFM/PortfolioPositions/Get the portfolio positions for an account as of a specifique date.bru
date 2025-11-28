@@ -1,0 +1,26 @@
+meta {
+  name: Get the portfolio positions for an account as of a specifique date
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/pfm/api/v1/accounts/:accountId/portfolio/positions/asof
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~requestedCurrency: 
+  ~portfolioDate: 
+  ~sortOrder: 
+}
+
+params:path {
+  accountId: 
+}
+
+headers {
+  apiroute: {{apiRoute}}
+  apikey: {{apiKey}}
+}

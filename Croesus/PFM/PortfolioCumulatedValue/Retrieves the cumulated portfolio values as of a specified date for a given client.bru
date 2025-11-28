@@ -1,0 +1,25 @@
+meta {
+  name: Retrieves the cumulated portfolio values as of a specified date for a given client.
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/pfm/api/v1/clients/:clientId/portfolio/cumulatedvalues/asof
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~requestedCurrency: 
+  ~portfolioDate: 
+}
+
+params:path {
+  clientId: 
+}
+
+headers {
+  apiroute: {{apiRoute}}
+  apikey: {{apiKey}}
+}

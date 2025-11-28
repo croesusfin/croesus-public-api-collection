@@ -1,0 +1,27 @@
+meta {
+  name: Create a document for a given parent context id
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/crm/api/v2/:contextType/:contextId/Documents
+  body: multipartForm
+  auth: inherit
+}
+
+params:path {
+  contextType: 
+  contextId: 
+}
+
+headers {
+  apiroute: {{apiRoute}}
+  apikey: {{apiKey}}
+}
+
+body:multipart-form {
+  file: 
+  comment: 
+  path: 
+}

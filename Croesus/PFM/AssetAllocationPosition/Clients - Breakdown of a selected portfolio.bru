@@ -1,0 +1,25 @@
+meta {
+  name: Clients - Breakdown of a selected portfolio
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/pfm/api/v1/clients/:clientId/portfolio/assetAllocations/positions
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~requestedCurrency: 
+  ~assetAllocationId: 
+}
+
+params:path {
+  clientId: 
+}
+
+headers {
+  apiroute: {{apiRoute}}
+  apikey: {{apiKey}}
+}

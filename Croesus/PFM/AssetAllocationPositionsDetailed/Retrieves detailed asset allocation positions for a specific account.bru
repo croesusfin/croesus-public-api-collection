@@ -1,0 +1,25 @@
+meta {
+  name: Retrieves detailed asset allocation positions for a specific account.
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/pfm/api/v1/accounts/:accountId/portfolio/assetAllocations/positions/detailed
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~requestedCurrency: 
+  ~assetAllocationId: 
+}
+
+params:path {
+  accountId: 
+}
+
+headers {
+  apiroute: {{apiRoute}}
+  apikey: {{apiKey}}
+}

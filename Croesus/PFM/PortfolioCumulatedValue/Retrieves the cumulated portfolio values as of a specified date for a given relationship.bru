@@ -1,0 +1,25 @@
+meta {
+  name: Retrieves the cumulated portfolio values as of a specified date for a given relationship.
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/pfm/api/v1/relationships/:relationshipId/portfolio/cumulatedvalues/asof
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~requestedCurrency: 
+  ~portfolioDate: 
+}
+
+params:path {
+  relationshipId: 
+}
+
+headers {
+  apiroute: {{apiRoute}}
+  apikey: {{apiKey}}
+}

@@ -1,0 +1,25 @@
+meta {
+  name: Get the portfolio positions detail for an relationship
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/pfm/api/v1/relationships/:relationshipId/portfolio/positions/detailed
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~requestedCurrency: 
+  ~sortOrder: 
+}
+
+params:path {
+  relationshipId: 
+}
+
+headers {
+  apiroute: {{apiRoute}}
+  apikey: {{apiKey}}
+}

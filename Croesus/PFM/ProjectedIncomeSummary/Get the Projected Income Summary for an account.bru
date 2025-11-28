@@ -1,0 +1,24 @@
+meta {
+  name: Get the Projected Income Summary for an account
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/pfm/api/v1/accounts/:accountId/portfolio/projectedIncome/summary
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~requestedCurrency: 
+}
+
+params:path {
+  accountId: 
+}
+
+headers {
+  apiroute: {{apiRoute}}
+  apikey: {{apiKey}}
+}

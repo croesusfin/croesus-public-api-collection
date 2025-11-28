@@ -1,0 +1,26 @@
+meta {
+  name: Get the portfolio asset allocation classes for a relationship as of a specifique date
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/pfm/api/v1/relationships/:relationshipId/portfolio/assetAllocations/assetClasses/asof
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~requestedCurrency: 
+  ~includeFundAllocation: 
+  ~portfolioDate: 
+}
+
+params:path {
+  relationshipId: 
+}
+
+headers {
+  apiroute: {{apiRoute}}
+  apikey: {{apiKey}}
+}
