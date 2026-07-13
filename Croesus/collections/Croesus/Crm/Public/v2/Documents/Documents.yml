@@ -1,0 +1,69 @@
+info:
+  name: Documents
+  type: http
+  seq: 21
+http:
+  method: GET
+  url: '{{Crm}}/public/api/v2/:contextType/:contextId/Documents'
+  params:
+  - name: contextType
+    value: ''
+    type: path
+  - name: contextId
+    value: ''
+    type: path
+  - name: name
+    value: ''
+    type: query
+    disabled: true
+  - name: dateUploadedFrom
+    value: ''
+    type: query
+    disabled: true
+  - name: dateUploadedTo
+    value: ''
+    type: query
+    disabled: true
+  - name: uploadedBy
+    value: ''
+    type: query
+    disabled: true
+  - name: after
+    value: ''
+    type: query
+    disabled: true
+  - name: before
+    value: ''
+    type: query
+    disabled: true
+  - name: pageLimit
+    value: ''
+    type: query
+    disabled: true
+  - name: sortingRules
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nGet a a list of documents (related information) owned by its parent\
+  \ context Id and the filters sent\n\n## Description\n`min ref 2024-08 (90.45)`\n\
+  \n## Parameters\n\n- **contextType** (path) : The context type of the context id\
+  \ passed as parameter.\r\nThe api will search for only for the documents owned by\
+  \ this context type\n- **contextId** (path) : A single context id\n- **name** (query)\
+  \ : The name of the document (file name)\n- **dateUploadedFrom** (query) : Starting\
+  \ date to filter the documents\n- **dateUploadedTo** (query) : Ending data to filter\
+  \ the documents\n- **uploadedBy** (query) : The name of the user that uploaded the\
+  \ document\n- **after** (query) : The item id of the first item to be returned in\
+  \ the page when moving forward. \\\r\nGet this value from the field *Next* of your\
+  \ response\n- **before** (query) : The item id of the last item to be returned in\
+  \ the page when moving backwards. \\\r\nGet this value from the field *Previous*\
+  \ of your response\n- **pageLimit** (query) : The maximun number of items a page\
+  \ should return\n- **sortingRules** (query) : List of properties to sort. \\\r\n\
+  Use comma as delimiter and a - sign for descending ( i.e. -Name ) \\\r\n*Available\
+  \ values*: Name, DateUploaded, UploadedBy"

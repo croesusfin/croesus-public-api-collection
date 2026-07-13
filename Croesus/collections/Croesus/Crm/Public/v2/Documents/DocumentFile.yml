@@ -1,0 +1,42 @@
+info:
+  name: DocumentFile
+  type: http
+  seq: 20
+http:
+  method: GET
+  url: '{{Crm}}/public/api/v2/:contextType/:contextId/Documents/:id/File'
+  params:
+  - name: contextType
+    value: ''
+    type: path
+  - name: contextId
+    value: ''
+    type: path
+  - name: id
+    value: ''
+    type: path
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: '# Summary
+
+  Get a single document by its id and its parent context Id
+
+
+  ## Description
+
+  `min ref 2024-08 (90.45)`
+
+
+  ## Parameters
+
+
+  - **contextType** (path) : The context type of the context id passed as parameter.
+
+  - **contextId** (path) : A single context id
+
+  - **id** (path) : Id of the document'

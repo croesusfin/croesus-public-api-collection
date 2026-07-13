@@ -1,0 +1,24 @@
+info:
+  name: BulkAccounts
+  type: http
+  seq: 8
+http:
+  method: PATCH
+  url: '{{Crm}}/public/api/v1/Accounts/bulk'
+  params: null
+  body:
+    type: json
+    data: "[\n  {\n    \"ContextId\": 0,\n    \"PatchRequest\": [\n      null\n  \
+      \  ]\n  }\n]"
+  auth: inherit
+  headers:
+  - name: Content-Type
+    value: application/json
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nUpdate the values of one or more accounts\n\n## Description\n`min\
+  \ ref 2026-04 (90.52)`\r\n</br>\r\n</br>\r\nUpdate the values of one or more accounts\
+  \ using bulk patch operations\n"

@@ -1,0 +1,16 @@
+name: Template
+variables:
+- name: ClientId
+  value: ClientIdHere
+- name: ClientSecret
+  value: ClientSecretHere
+- name: Assertion
+  value: PlaceNothingHere
+- name: Token
+  value: PlaceNothingHere
+- name: Iss
+  value: SoftWareNameHere
+- name: Sub
+  value: StationIdHere
+- name: PrivateKey
+  value: PrivateKeyHere

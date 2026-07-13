@@ -1,0 +1,34 @@
+info:
+  name: Users_PatchUser
+  type: http
+  seq: 4
+http:
+  method: PATCH
+  url: '{{Platform}}/plf/scim/v2/Users/:id'
+  params:
+  - name: id
+    value: ''
+    type: path
+  body:
+    type: json
+    data: "{\n  \"schemas\": [\n    \"string\"\n  ],\n  \"Operations\": [\n    {\n\
+      \      \"op\": \"string\",\n      \"path\": \"string\",\n      \"value\": {}\n\
+      \    }\n  ]\n}"
+  auth: inherit
+  headers:
+  - name: Content-Type
+    value: application/json
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: '# Summary
+
+  Partially updates a SCIM user using JSON Patch operations.
+
+
+  ## Parameters
+
+
+  - **id** (path) : '

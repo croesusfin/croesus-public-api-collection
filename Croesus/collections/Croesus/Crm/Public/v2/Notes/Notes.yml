@@ -1,0 +1,81 @@
+info:
+  name: Notes
+  type: http
+  seq: 25
+http:
+  method: GET
+  url: '{{Crm}}/public/api/v2/:contextType/:contextId/Notes'
+  params:
+  - name: contextType
+    value: ''
+    type: path
+  - name: contextId
+    value: ''
+    type: path
+  - name: noteIds
+    value: ''
+    type: query
+    disabled: true
+  - name: comment
+    value: ''
+    type: query
+    disabled: true
+  - name: firstName
+    value: ''
+    type: query
+    disabled: true
+  - name: lastName
+    value: ''
+    type: query
+    disabled: true
+  - name: dateFrom
+    value: ''
+    type: query
+    disabled: true
+  - name: dateTo
+    value: ''
+    type: query
+    disabled: true
+  - name: isReviewed
+    value: ''
+    type: query
+    disabled: true
+  - name: after
+    value: ''
+    type: query
+    disabled: true
+  - name: before
+    value: ''
+    type: query
+    disabled: true
+  - name: pageLimit
+    value: ''
+    type: query
+    disabled: true
+  - name: sortingRules
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nGet all the notes base on the filters\n\n## Description\n`min ref\
+  \ 2024-08 (90.45)`\n\n## Parameters\n\n- **contextType** (path) : The context type\
+  \ of the context id passed as parameter.\n- **contextId** (path) : The api will\
+  \ search only for the notes owned by this context id\n- **noteIds** (query) : The\
+  \ list of note ids\n- **comment** (query) : The comment of the note\n- **firstName**\
+  \ (query) : First name of the creator of the note\n- **lastName** (query) : Last\
+  \ name of the creator of the note\n- **dateFrom** (query) : Starting date to filter\
+  \ the notes\n- **dateTo** (query) : Ending data to filter the notes\n- **isReviewed**\
+  \ (query) : Indicates whether the note is reviewed or not\n- **after** (query) :\
+  \ The item id of the first item to be returned in the page when moving forward.\
+  \ \\\r\nGet this value from the field *Next* of your response\n- **before** (query)\
+  \ : The item id of the last item to be returned in the page when moving backwards.\
+  \ \\\r\nGet this value from the field *Previous* of your response\n- **pageLimit**\
+  \ (query) : The maximun number of items a page should return\n- **sortingRules**\
+  \ (query) : List of properties to sort. \\\r\nUse comma as delimiter and a - sign\
+  \ for descending ( i.e. -Name ) \\\r\n*Available values*: Name, DateUploaded, UploadedBy"

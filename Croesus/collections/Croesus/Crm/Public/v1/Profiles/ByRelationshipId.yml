@@ -1,0 +1,29 @@
+info:
+  name: ByRelationshipId
+  type: http
+  seq: 11
+http:
+  method: PATCH
+  url: '{{Crm}}/public/api/v1/relationships/:relationshipId/profiles/bulk'
+  params:
+  - name: relationshipId
+    value: ''
+    type: path
+  body:
+    type: json
+    data: "[\n  null\n]"
+  auth: inherit
+  headers:
+  - name: Content-Type
+    value: application/json
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nUpdate the value of one or more profile values for a given relationship.\n\
+  \n## Description\n`min ref 2026-08 (90.53)`\r\n</br>\r\n</br>\r\n            Update\
+  \ the value of one or more profile values for a given relationship.The\r\n     \
+  \       profile values are identified by their ProfileId.The profile values are\r\
+  \n            updated in bulk.\n\n## Parameters\n\n- **relationshipId** (path) :\
+  \ A single relationship id"

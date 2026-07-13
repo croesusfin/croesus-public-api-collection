@@ -1,0 +1,26 @@
+info:
+  name: ClientsGroupedProfilesConfig
+  type: http
+  seq: 13
+http:
+  method: PATCH
+  url: '{{Crm}}/public/api/v1/Clients/Profiles/Definitions/bulk'
+  params: null
+  body:
+    type: json
+    data: "[\n  {\n    \"ContextId\": 0,\n    \"PatchRequest\": [\n      null\n  \
+      \  ]\n  }\n]"
+  auth: inherit
+  headers:
+  - name: Content-Type
+    value: application/json
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nUpdate the values of one or more profile definitions for client\
+  \ context.\n\n## Description\n`min ref 2026-08 (90.53)`\r\n</br>\r\n</br>\r\n  \
+  \          Update the values of one or more profile definitions for client context.\
+  \ \r\n            The profile definitions are identified by their ProfileId. \r\n\
+  \            The profile definitions values are updated in bulk.\n"

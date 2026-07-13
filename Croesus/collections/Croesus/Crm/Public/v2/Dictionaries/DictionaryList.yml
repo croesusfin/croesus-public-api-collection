@@ -1,0 +1,29 @@
+info:
+  name: DictionaryList
+  type: http
+  seq: 18
+http:
+  method: GET
+  url: '{{Crm}}/public/api/v2/Dictionaries'
+  params:
+  - name: requestedCulture
+    value: ''
+    type: query
+    disabled: true
+  - name: sortingRules
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nGet a list of public dictionaries\n\n## Description\n`min ref 2025-12\
+  \ (90.51)`\r\n</br>\r\nGet a list of public dictionaries.\n\n## Parameters\n\n-\
+  \ **requestedCulture** (query) : The Culture requested for display \\\r\n*Available\
+  \ values*: en or fr\n- **sortingRules** (query) : List of properties to sort. \\\
+  \r\nUse comma as delimiter and a - sign for descending ( i.e. -Name ) \\\r\n*Available\
+  \ values*: Mnemonic, Name"

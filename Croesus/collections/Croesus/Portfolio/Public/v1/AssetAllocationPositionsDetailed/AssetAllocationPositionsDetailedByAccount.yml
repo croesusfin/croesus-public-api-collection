@@ -1,0 +1,35 @@
+info:
+  name: AssetAllocationPositionsDetailedByAccount
+  type: http
+  seq: 12
+http:
+  method: GET
+  url: '{{Portfolio}}/public/api/v1/accounts/:accountId/portfolio/assetAllocations/positions/detailed'
+  params:
+  - name: accountId
+    value: ''
+    type: path
+  - name: requestedCurrency
+    value: ''
+    type: query
+    disabled: true
+  - name: assetAllocationId
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nRetrieves detailed asset allocation positions for a specific account.\n\
+  \n## Description\n`min ref 2025-08 (90.51)`\n\n## Parameters\n\n- **accountId**\
+  \ (path) : The unique identifier of the account for which asset allocation positions\
+  \ are requested.\n- **requestedCurrency** (query) : The currency in which the asset\
+  \ allocation position should be expressed.  This parameter is optional and can be\r\
+  \n            null, in which case the default currency will be used.\n- **assetAllocationId**\
+  \ (query) : The unique identifier of the asset allocation to retrieve.  This parameter\
+  \ is optional and can be null,\r\n            in which case all asset allocations\
+  \ may be retrieved."

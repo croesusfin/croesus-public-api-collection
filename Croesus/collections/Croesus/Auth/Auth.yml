@@ -1,0 +1,39 @@
+info:
+  name: Auth
+  type: http
+  seq: 1
+http:
+  method: POST
+  url: '{{Auth}}/connect/token'
+  body:
+    type: form-urlencoded
+    data:
+    - name: grant_type
+      value: jwt-bearer
+    - name: client_id
+      value: '{{ClientId}}'
+    - name: client_secret
+      value: '{{ClientSecret}}'
+    - name: assertion
+      value: '{{Assertion}}'
+    - name: language
+      value: fr-CA
+runtime:
+  scripts:
+  - type: before-request
+    code: "const jwt = require('jsonwebtoken');\n\nconst payload = { \n  'sub': bru.getGlobalEnvVar('Sub'),\n\
+      \  'exp': Math.round(3600 + Date.now() / 1000),\n  'iat': Math.round(Date.now()\
+      \ / 1000),\n  'iss': bru.getGlobalEnvVar('Iss'),\n};\nconst secret = bru.getGlobalEnvVar('PrivateKey');\n\
+      \nconst options = { \n  algorithm: 'RS256',\n  header: {\n    typ: 'JWT',\n\
+      \  }\n};\n\nconst token = jwt.sign(payload, secret, options);\n\nbru.setGlobalEnvVar(\"\
+      Assertion\", token);\nreq.setHeader(\"Authorization\", `Bearer ${token}`);"
+  - type: after-response
+    code: 'var data = res.getBody();
+
+
+      bru.setGlobalEnvVar("Token", data.access_token);'
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

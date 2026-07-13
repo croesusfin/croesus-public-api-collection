@@ -1,0 +1,47 @@
+info:
+  name: PortfolioPositionsByAccount
+  type: http
+  seq: 43
+http:
+  method: GET
+  url: '{{Portfolio}}/public/api/v1/accounts/:accountId/portfolio/positions'
+  params:
+  - name: accountId
+    value: ''
+    type: path
+  - name: requestedCurrency
+    value: ''
+    type: query
+    disabled: true
+  - name: sortOrder
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: '# Summary
+
+  Get the portfolio positions for an account
+
+
+  ## Description
+
+  `min ref 2024-12 (90.47)`
+
+
+  ## Parameters
+
+
+  - **accountId** (path) : A Croesus id for the account
+
+  - **requestedCurrency** (query) : The portfolio will be returned in this currency.
+  The list of supported currencies follow the International Standard for currency
+  codes (ISO 4217).
+
+  - **sortOrder** (query) : Predefined Sorting Option: only one option at the time
+  (Default value will be BasicCategory)'

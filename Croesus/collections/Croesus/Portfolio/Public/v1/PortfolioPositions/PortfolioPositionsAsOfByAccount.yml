@@ -1,0 +1,53 @@
+info:
+  name: PortfolioPositionsAsOfByAccount
+  type: http
+  seq: 40
+http:
+  method: GET
+  url: '{{Portfolio}}/public/api/v1/accounts/:accountId/portfolio/positions/asof'
+  params:
+  - name: accountId
+    value: ''
+    type: path
+  - name: requestedCurrency
+    value: ''
+    type: query
+    disabled: true
+  - name: portfolioDate
+    value: ''
+    type: query
+    disabled: true
+  - name: sortOrder
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: '# Summary
+
+  Get the portfolio positions for an account as of a specifique date
+
+
+  ## Description
+
+  `min ref 2025-04 (90.49)`
+
+
+  ## Parameters
+
+
+  - **accountId** (path) : A Croesus id for the account
+
+  - **requestedCurrency** (query) : The portfolio will be returned in this currency.
+  The list of supported currencies follow the International Standard for currency
+  codes (ISO 4217).
+
+  - **portfolioDate** (query) : The date to use for the portfolio calculation
+
+  - **sortOrder** (query) : Predefined Sorting Option: only one option at the time
+  (Default value will be BasicCategory)'

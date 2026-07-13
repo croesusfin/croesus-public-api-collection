@@ -1,0 +1,30 @@
+info:
+  name: Document
+  type: http
+  seq: 45
+http:
+  method: POST
+  url: '{{Crm}}/public/api/v2/:contextType/:contextId/Documents'
+  params:
+  - name: contextType
+    value: ''
+    type: path
+  - name: contextId
+    value: ''
+    type: path
+  body: null
+  auth: inherit
+  headers:
+  - name: Content-Type
+    value: multipart/form-data
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nCreate a document for a given parent context id\n\n## Description\n\
+  File types accepted: DOC, DOCX, XLS, XLSX, PPT, PPTX, PUB, PDF, JPG, JPEG, PNG,\
+  \ BMP, TXT, EML\r\n\r\n\r\n\r\n`min ref 2024-08 (90.45)`\n\n## Parameters\n\n- **contextType**\
+  \ (path) : The context type of the context id passed as parameter.\r\nThe api will\
+  \ create the document owned by a context id of this type\n- **contextId** (path)\
+  \ : A single context id"

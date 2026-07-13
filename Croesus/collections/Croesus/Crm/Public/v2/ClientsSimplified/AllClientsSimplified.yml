@@ -1,0 +1,64 @@
+info:
+  name: AllClientsSimplified
+  type: http
+  seq: 13
+http:
+  method: GET
+  url: '{{Crm}}/public/api/v2/Clients/Simplified'
+  params:
+  - name: clientIds
+    value: ''
+    type: query
+    disabled: true
+  - name: clientNumbers
+    value: ''
+    type: query
+    disabled: true
+  - name: investmentAdvisorCodes
+    value: ''
+    type: query
+    disabled: true
+  - name: clientCurrency
+    value: ''
+    type: query
+    disabled: true
+  - name: shortName
+    value: ''
+    type: query
+    disabled: true
+  - name: after
+    value: ''
+    type: query
+    disabled: true
+  - name: before
+    value: ''
+    type: query
+    disabled: true
+  - name: pageLimit
+    value: ''
+    type: query
+    disabled: true
+  - name: sortingRules
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nGet a list of simplifid clients based on the filters sent\n\n##\
+  \ Description\n`min ref 2025-08 (90.50)`\n\n## Parameters\n\n- **clientIds** (query)\
+  \ : A list of client ids (Maximum 50)\n- **clientNumbers** (query) : A list of client\
+  \ numbers (Maximum 50)\n- **investmentAdvisorCodes** (query) : A list of advisors\
+  \ codes (Maximum 50)\n- **clientCurrency** (query) : The Client Currency\n- **shortName**\
+  \ (query) : The Short Name\n- **after** (query) : The item id of the first item\
+  \ to be returned in the page when moving forward. \\\r\nGet this value from the\
+  \ field *Next* of your response\n- **before** (query) : The item id of the last\
+  \ item to be returned in the page when moving backwards. \\\r\nGet this value from\
+  \ the field *Previous* of your response\n- **pageLimit** (query) : The maximun number\
+  \ of items a page should return\n- **sortingRules** (query) : List of properties\
+  \ to sort. \\\r\nUse comma as delimiter and a - sign for descending ( i.e. -ShortName\
+  \ ) \\\r\n*Available values*: ShortName, ClientId, ClientNumber, InvestmentAdvisorCode"

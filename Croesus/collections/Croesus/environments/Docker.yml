@@ -1,0 +1,34 @@
+name: Docker
+variables:
+- name: BaseUrl
+  value: http://localhost
+- name: Access
+  value: '{{BaseUrl}}:5200'
+  disabled: true
+- name: Access
+  value: '{{BaseUrl}}/AccessService'
+- name: Auth
+  value: '{{BaseUrl}}:5025'
+  disabled: true
+- name: Auth
+  value: '{{BaseUrl}}/AuthServices'
+- name: Crm
+  value: '{{BaseUrl}}:5353'
+  disabled: true
+- name: Crm
+  value: '{{BaseUrl}}/CrmApplicationService'
+- name: Portfolio
+  value: '{{BaseUrl}}:5753'
+  disabled: true
+- name: Portfolio
+  value: '{{BaseUrl}}/PortfolioApplicationService'
+- name: Market
+  value: '{{BaseUrl}}:5953'
+  disabled: true
+- name: Market
+  value: '{{BaseUrl}}/MarketApplicationService'
+- name: Platform
+  value: '{{BaseUrl}}:5331'
+  disabled: true
+- name: Platform
+  value: '{{BaseUrl}}/PlatformApplicationService'

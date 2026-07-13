@@ -1,0 +1,30 @@
+info:
+  name: ByAccountId
+  type: http
+  seq: 9
+http:
+  method: PATCH
+  url: '{{Crm}}/public/api/v1/accounts/:accountId/profiles/bulk'
+  params:
+  - name: accountId
+    value: ''
+    type: path
+  body:
+    type: json
+    data: "[\n  {\n    \"ProfileId\": 0,\n    \"PatchRequest\": [\n      null\n  \
+      \  ]\n  }\n]"
+  auth: inherit
+  headers:
+  - name: Content-Type
+    value: application/json
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nUpdate the value of one or more profile values for a given account.\n\
+  \n## Description\n`min ref 2026-08 (90.53)`\r\n</br>\r\n</br>\r\n            Update\
+  \ the value of one or more profile values for a given account.The\r\n          \
+  \  profile values are identified by their ProfileId.The profile values are\r\n \
+  \           updated in bulk.\n\n## Parameters\n\n- **accountId** (path) : A single\
+  \ account id"

@@ -1,0 +1,37 @@
+info:
+  name: Client
+  type: http
+  seq: 12
+http:
+  method: PATCH
+  url: '{{Crm}}/public/api/v1/Clients/:clientId'
+  params:
+  - name: clientId
+    value: ''
+    type: path
+  body:
+    type: json
+    data: "[\n  null\n]"
+  auth: inherit
+  headers:
+  - name: Content-Type
+    value: application/json
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: '# Summary
+
+  Update a client partially using
+
+
+  ## Description
+
+  `min ref 2026-04 (90.52)`
+
+
+  ## Parameters
+
+
+  - **clientId** (path) : The unique identifier of the client to update.'

@@ -1,0 +1,40 @@
+info:
+  name: ProjectedIncomeSummaryByAccount
+  type: http
+  seq: 61
+http:
+  method: GET
+  url: '{{Portfolio}}/public/api/v1/accounts/:accountId/portfolio/projectedIncome/summary'
+  params:
+  - name: accountId
+    value: ''
+    type: path
+  - name: requestedCurrency
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: '# Summary
+
+  Get the Projected Income Summary for an account
+
+
+  ## Description
+
+  `min ref 2025-02 (90.48)`
+
+
+  ## Parameters
+
+
+  - **accountId** (path) : A Croesus id for the account
+
+  - **requestedCurrency** (query) : The portfolio will be returned in this currency.
+  The list of supported currencies follow the International Standard for currency
+  codes (ISO 4217).'

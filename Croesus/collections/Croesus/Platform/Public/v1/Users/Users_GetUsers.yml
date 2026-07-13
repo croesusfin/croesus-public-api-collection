@@ -1,0 +1,65 @@
+info:
+  name: Users_GetUsers
+  type: http
+  seq: 3
+http:
+  method: GET
+  url: '{{Platform}}/plf/scim/v2/Users'
+  params:
+  - name: filter
+    value: ''
+    type: query
+    disabled: true
+  - name: attributes
+    value: ''
+    type: query
+    disabled: true
+  - name: excludedAttributes
+    value: ''
+    type: query
+    disabled: true
+  - name: sortBy
+    value: ''
+    type: query
+    disabled: true
+  - name: sortOrder
+    value: ''
+    type: query
+    disabled: true
+  - name: startIndex
+    value: ''
+    type: query
+    disabled: true
+  - name: count
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: '# Summary
+
+  Retrieves a list of SCIM users with optional filtering, sorting, and pagination.
+
+
+  ## Parameters
+
+
+  - **filter** (query) : SCIM filter expression (e.g., ''userName eq "john.doe"'')
+
+  - **attributes** (query) : Comma-separated list of attributes to include in response
+
+  - **excludedAttributes** (query) : Comma-separated list of attributes to exclude
+  from response
+
+  - **sortBy** (query) : Attribute name to sort by (e.g., ''userName'', ''displayName'')
+
+  - **sortOrder** (query) : Sort order: ''ascending'' or ''descending''
+
+  - **startIndex** (query) : 1-based start index for pagination (default: 1)
+
+  - **count** (query) : Number of resources to return per page (default: 20)'

@@ -1,0 +1,40 @@
+info:
+  name: ProjectedIncomeSummaryByRelationship
+  type: http
+  seq: 63
+http:
+  method: GET
+  url: '{{Portfolio}}/public/api/v1/relationships/:relationshipId/portfolio/projectedIncome/summary'
+  params:
+  - name: relationshipId
+    value: ''
+    type: path
+  - name: requestedCurrency
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: '# Summary
+
+  Get the Projected Income Summary for an relationship
+
+
+  ## Description
+
+  `min ref 2025-02 (90.48)`
+
+
+  ## Parameters
+
+
+  - **relationshipId** (path) : A Croesus id for the relationship
+
+  - **requestedCurrency** (query) : The portfolio will be returned in this currency.
+  The list of supported currencies follow the International Standard for currency
+  codes (ISO 4217).'

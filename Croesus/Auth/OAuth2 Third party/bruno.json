@@ -1,9 +1,0 @@
-{
-  "version": "1",
-  "name": "OAuth2 Third party",
-  "type": "collection",
-  "ignore": [
-    "node_modules",
-    ".git"
-  ]
-}

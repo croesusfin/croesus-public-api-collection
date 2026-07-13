@@ -1,0 +1,53 @@
+info:
+  name: PortfolioPositionsAsOfByRelationship
+  type: http
+  seq: 42
+http:
+  method: GET
+  url: '{{Portfolio}}/public/api/v1/relationships/:relationshipId/portfolio/positions/asof'
+  params:
+  - name: relationshipId
+    value: ''
+    type: path
+  - name: requestedCurrency
+    value: ''
+    type: query
+    disabled: true
+  - name: portfolioDate
+    value: ''
+    type: query
+    disabled: true
+  - name: sortOrder
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: '# Summary
+
+  Get the portfolio positions for a relationship as of a specifique date
+
+
+  ## Description
+
+  `min ref 2025-04 (90.49)`
+
+
+  ## Parameters
+
+
+  - **relationshipId** (path) : A Croesus id for the relationship
+
+  - **requestedCurrency** (query) : The portfolio will be returned in this currency.
+  The list of supported currencies follow the International Standard for currency
+  codes (ISO 4217).
+
+  - **portfolioDate** (query) : The date to use for the portfolio calculation
+
+  - **sortOrder** (query) : Predefined Sorting Option: only one option at the time
+  (Default value will be BasicCategory)'

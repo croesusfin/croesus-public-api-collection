@@ -1,0 +1,42 @@
+info:
+  name: SecurityDistributionHistories
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{Market}}/public/api/v1/securities/:securityId/distribution-histories'
+  params:
+  - name: securityId
+    value: ''
+    type: path
+  - name: startDate
+    value: ''
+    type: query
+    disabled: true
+  - name: endDate
+    value: ''
+    type: query
+    disabled: true
+  - name: dateType
+    value: ''
+    type: query
+    disabled: true
+  - name: sortingRules
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nGet the Distributions Histories for a given security id.\n\n## Description\n\
+  `min ref 2026-08 (90.53)`\n\n## Parameters\n\n- **securityId** (path) : A croesus\
+  \ id for the security\n- **startDate** (query) : Start date of the DateType chosen\
+  \ (yyyy-MM-dd).\n- **endDate** (query) : End date of the DateType chosen (yyyy-MM-dd).\n\
+  - **dateType** (query) : \n- **sortingRules** (query) : List of properties to sort.\
+  \ \\\r\nUse comma as delimiter and a - sign for descending ( i.e. -RecordDate )\
+  \ \\\r\n*Available values*: RecordDate, ExDividendDate, PaymentDate, DistributionTotal,\
+  \ CapitalGains, DividendAmount, Interest, ReturnOfCapital, ForeignDividend"

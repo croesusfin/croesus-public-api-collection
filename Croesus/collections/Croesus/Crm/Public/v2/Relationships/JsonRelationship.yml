@@ -1,0 +1,25 @@
+info:
+  name: JsonRelationship
+  type: http
+  seq: 43
+http:
+  method: PATCH
+  url: '{{Crm}}/public/api/v2/Relationships/:relationshipId'
+  params:
+  - name: relationshipId
+    value: ''
+    type: path
+  body: null
+  auth: inherit
+  headers:
+  - name: Content-Type
+    value: application/json-patch+json
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nUpdate a single relationship using a relationship id\n\n## Description\n\
+  `min ref 2025-12 (90.51)`\r\n</br>\r\n</br>\r\n            Update a single relationship\
+  \ using a relationship id\n\n## Parameters\n\n- **relationshipId** (path) : A single\
+  \ relationship id"

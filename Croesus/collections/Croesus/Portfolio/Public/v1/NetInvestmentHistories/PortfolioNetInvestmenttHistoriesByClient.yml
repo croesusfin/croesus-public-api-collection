@@ -1,0 +1,41 @@
+info:
+  name: PortfolioNetInvestmenttHistoriesByClient
+  type: http
+  seq: 29
+http:
+  method: GET
+  url: '{{Portfolio}}/public/api/v1/clients/:clientId/portfolio/netinvestment/histories'
+  params:
+  - name: clientId
+    value: ''
+    type: path
+  - name: interval
+    value: ''
+    type: query
+    disabled: true
+  - name: portfolioDate
+    value: ''
+    type: query
+    disabled: true
+  - name: considerManagementStartDate
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nRetrieves the net investment details for a specific client portfolio.\n\
+  \n## Description\n`min ref 2025-08 (90.51)`\r\n            This method validates\
+  \ the incoming request and retrieves net investment details using\r\n          \
+  \  the specified criteria. Ensure that the request object is properly populated\
+  \ before\r\n            calling this method.\n\n## Parameters\n\n- **clientId**\
+  \ (path) : The unique identifier of the client whose portfolio net investment details\
+  \ are being requested. Must be a\r\n            positive integer.\n- **interval**\
+  \ (query) : Gets or sets the interval at which an operation or event occurs. (monthly,\
+  \ quarterly, semi-annually, annually)\n- **portfolioDate** (query) : The date to\
+  \ use for the portfolio summary calculation\n- **considerManagementStartDate** (query)\
+  \ : If false, start date will be account inception date."

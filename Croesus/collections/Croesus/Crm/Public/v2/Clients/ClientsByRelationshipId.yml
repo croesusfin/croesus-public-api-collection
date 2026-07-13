@@ -1,0 +1,49 @@
+info:
+  name: ClientsByRelationshipId
+  type: http
+  seq: 16
+http:
+  method: GET
+  url: '{{Crm}}/public/api/v2/Relationships/:relationshipId/Clients'
+  params:
+  - name: relationshipId
+    value: ''
+    type: path
+  - name: requestedCurrency
+    value: ''
+    type: query
+    disabled: true
+  - name: sortingRules
+    value: ''
+    type: query
+    disabled: true
+  - name: after
+    value: ''
+    type: query
+    disabled: true
+  - name: before
+    value: ''
+    type: query
+    disabled: true
+  - name: pageLimit
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nGet a list of clients by a relationship id\n\n## Description\n`min\
+  \ ref 2024-12 (90.47)`\n\n## Parameters\n\n- **relationshipId** (path) : The relationship\
+  \ id to search the clients\n- **requestedCurrency** (query) : The Currency requested\
+  \ for display\n- **sortingRules** (query) : List of properties to sort. \\\r\nUse\
+  \ comma as delimiter and a - sign for descending ( i.e. -LongName ) \\\r\n*Available\
+  \ values*: LongName, Number, InvestmentAdvisorCode, ClientCurrency\n- **after**\
+  \ (query) : The item id of the first item to be returned in the page when moving\
+  \ forward. \\\r\nGet this value from the field *Next* of your response\n- **before**\
+  \ (query) : The item id of the last item to be returned in the page when moving\
+  \ backwards. \\\r\nGet this value from the field *Previous* of your response\n-\
+  \ **pageLimit** (query) : The maximun number of items a page should return"

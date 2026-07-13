@@ -1,0 +1,27 @@
+info:
+  name: Users_GetUser
+  type: http
+  seq: 2
+http:
+  method: GET
+  url: '{{Platform}}/plf/scim/v2/Users/:id'
+  params:
+  - name: id
+    value: ''
+    type: path
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: '# Summary
+
+  Retrieves a specific SCIM user by their unique identifier.
+
+
+  ## Parameters
+
+
+  - **id** (path) : '

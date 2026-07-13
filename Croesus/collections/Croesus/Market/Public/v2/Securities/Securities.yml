@@ -1,0 +1,96 @@
+info:
+  name: Securities
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{Market}}/public/api/v2/securities'
+  params:
+  - name: securityNumbers
+    value: ''
+    type: query
+    disabled: true
+  - name: securityIds
+    value: ''
+    type: query
+    disabled: true
+  - name: symbol
+    value: ''
+    type: query
+    disabled: true
+  - name: description
+    value: ''
+    type: query
+    disabled: true
+  - name: market
+    value: ''
+    type: query
+    disabled: true
+  - name: securityCurrency
+    value: ''
+    type: query
+    disabled: true
+  - name: region
+    value: ''
+    type: query
+    disabled: true
+  - name: assetCategoryDescription
+    value: ''
+    type: query
+    disabled: true
+  - name: financialInstrument
+    value: ''
+    type: query
+    disabled: true
+  - name: includeIndexes
+    value: ''
+    type: query
+    disabled: true
+  - name: includeInactives
+    value: ''
+    type: query
+    disabled: true
+  - name: sortingRules
+    value: ''
+    type: query
+    disabled: true
+  - name: after
+    value: ''
+    type: query
+    disabled: true
+  - name: before
+    value: ''
+    type: query
+    disabled: true
+  - name: pageLimit
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nGet the list of securities based on filtering criteria.\n\n## Description\n\
+  `min ref 2026-04 (90.52)`\n\n## Parameters\n\n- **securityNumbers** (query) : Gets\
+  \ or sets the array of security number\n- **securityIds** (query) : Gets or sets\
+  \ the array of security identifiers.\n- **symbol** (query) : Gets or sets the symbol\
+  \ of the security.\n- **description** (query) : Gets or sets the description of\
+  \ the security.\n- **market** (query) : Gets or sets the market identifier associated\
+  \ with the current instance.\n- **securityCurrency** (query) : Currency in which\
+  \ the security values should be returned\n- **region** (query) : Gets or sets the\
+  \ region of the security.\n- **assetCategoryDescription** (query) : Gets or sets\
+  \ the asset category description.\n- **financialInstrument** (query) : Gets or sets\
+  \ the financial instrument associated with the transaction or operation. Available\
+  \ values are (Stock, MutualFund, Bond, Option, Basket, Index, Currency, Cash, Future,\
+  \ Other, ExchangeTradedFund, TrustUnit, AssetBackedSecurity)\n- **includeIndexes**\
+  \ (query) : Indicates whether to include index securities in the results.\n- **includeInactives**\
+  \ (query) : Indicates whether to include inactive securities in the results.\n-\
+  \ **sortingRules** (query) : List of properties to sort.\n- **after** (query) :\
+  \ The item id of the first item to be returned in the page when moving forward.\
+  \ \\\r\nGet this value from the field *Next* of your response\n- **before** (query)\
+  \ : The item id of the last item to be returned in the page when moving backwards.\
+  \ \\\r\nGet this value from the field *Previous* of your response\n- **pageLimit**\
+  \ (query) : The maximun number of items a page should return"

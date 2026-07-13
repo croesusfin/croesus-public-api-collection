@@ -1,0 +1,13 @@
+opencollection: 1.0.0
+info:
+  name: Croesus
+request:
+  auth:
+    type: bearer
+    token: '{{Token}}'
+bundled: false
+extensions:
+  bruno:
+    ignore:
+    - node_modules
+    - .git

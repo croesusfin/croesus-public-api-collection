@@ -1,0 +1,28 @@
+info:
+  name: AccountOrClientInBulk
+  type: http
+  seq: 47
+http:
+  method: POST
+  url: '{{Crm}}/public/api/v2/Relationships/:relationshipId/unassign/bulk'
+  params:
+  - name: relationshipId
+    value: ''
+    type: path
+  body:
+    type: json
+    data: "{\n  \"ContextType\": \"string\",\n  \"ContextIds\": [\n    0\n  ],\n \
+      \ \"UnassignMode\": \"string\"\n}"
+  auth: inherit
+  headers:
+  - name: Content-Type
+    value: application/json
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nUnassign accounts or clients to a relationship in bulk\n\n## Description\n\
+  `min ref 2026-04 (90.52)`\r\n</br>\r\n</br>\r\nUnassign a list of accounts or clients\
+  \ to a relationship in bulk.\n\n## Parameters\n\n- **relationshipId** (path) : Relationship\
+  \ Id"

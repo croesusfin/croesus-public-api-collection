@@ -1,0 +1,61 @@
+info:
+  name: Models
+  type: http
+  seq: 24
+http:
+  method: GET
+  url: '{{Portfolio}}/public/api/v1/models'
+  params:
+  - name: sortingRules
+    value: ''
+    type: query
+    disabled: true
+  - name: modelIds
+    value: ''
+    type: query
+    disabled: true
+  - name: modelNumbers
+    value: ''
+    type: query
+    disabled: true
+  - name: investmentAdvisorCodes
+    value: ''
+    type: query
+    disabled: true
+  - name: includeBaskets
+    value: ''
+    type: query
+    disabled: true
+  - name: after
+    value: ''
+    type: query
+    disabled: true
+  - name: before
+    value: ''
+    type: query
+    disabled: true
+  - name: pageLimit
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nGet a list of models accessible to the logged-in user.\n\n## Description\n\
+  `min ref 2026-04 (90.52)`\n\n## Parameters\n\n- **sortingRules** (query) : List\
+  \ of properties to sort. \\\r\nUse comma as delimiter and a - sign for descending\
+  \ ( i.e. -LongName ) \\\r\n*e.g*: LongName, Number, InvestmentAdvisorCode, RelationshipCurrency,\
+  \ RelationshipTypeDescription\n- **modelIds** (query) : List of Model Ids to filter\
+  \ the results by.\n- **modelNumbers** (query) : List of Model Numbers to filter\
+  \ the results by.\n- **investmentAdvisorCodes** (query) : List of Investment Advisor\
+  \ Codes to filter the results by.\n- **includeBaskets** (query) : Whether to include\
+  \ baskets or not.\n- **after** (query) : The item id of the first item to be returned\
+  \ in the page when moving forward. \\\r\nGet this value from the field *Next* of\
+  \ your response\n- **before** (query) : The item id of the last item to be returned\
+  \ in the page when moving backwards. \\\r\nGet this value from the field *Previous*\
+  \ of your response\n- **pageLimit** (query) : The maximun number of items a page\
+  \ should return"

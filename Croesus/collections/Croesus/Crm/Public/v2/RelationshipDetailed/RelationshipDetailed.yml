@@ -1,0 +1,38 @@
+info:
+  name: RelationshipDetailed
+  type: http
+  seq: 37
+http:
+  method: GET
+  url: '{{Crm}}/public/api/v2/Relationships/:relationshipId/Detailed'
+  params:
+  - name: relationshipId
+    value: ''
+    type: path
+  - name: requestedCurrency
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: '# Summary
+
+  Get a detailed relationship by his identifier
+
+
+  ## Description
+
+  `min ref 2025-08 (90.50)`
+
+
+  ## Parameters
+
+
+  - **relationshipId** (path) : The relationship id to search the relationship
+
+  - **requestedCurrency** (query) : The Currency requested for display'

@@ -1,0 +1,30 @@
+info:
+  name: ProjectedIncomeByAssetClassByAccount
+  type: http
+  seq: 58
+http:
+  method: GET
+  url: '{{Portfolio}}/public/api/v1/accounts/:accountId/portfolio/projectedincome/assetclasses'
+  params:
+  - name: accountId
+    value: ''
+    type: path
+  - name: requestedCurrency
+    value: ''
+    type: query
+    disabled: true
+  - name: assetAllocationId
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nGet the Projected Income for each asset class of a selected portfolio\r\
+  \nfor the coming 12 months following the call’s date for a given account\n\n## Description\n\
+  `min ref 2025-12 (90.51)`\n\n## Parameters\n\n- **accountId** (path) : Account Id\n\
+  - **requestedCurrency** (query) : \n- **assetAllocationId** (query) : "

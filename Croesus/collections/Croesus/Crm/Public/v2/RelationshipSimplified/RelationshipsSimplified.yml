@@ -1,0 +1,71 @@
+info:
+  name: RelationshipsSimplified
+  type: http
+  seq: 41
+http:
+  method: GET
+  url: '{{Crm}}/public/api/v2/Relationships/Simplified'
+  params:
+  - name: relationshipNumbers
+    value: ''
+    type: query
+    disabled: true
+  - name: relationshipIds
+    value: ''
+    type: query
+    disabled: true
+  - name: investmentAdvisorCodes
+    value: ''
+    type: query
+    disabled: true
+  - name: relationshipCurrency
+    value: ''
+    type: query
+    disabled: true
+  - name: shortName
+    value: ''
+    type: query
+    disabled: true
+  - name: relationshipTypeDescription
+    value: ''
+    type: query
+    disabled: true
+  - name: after
+    value: ''
+    type: query
+    disabled: true
+  - name: before
+    value: ''
+    type: query
+    disabled: true
+  - name: pageLimit
+    value: ''
+    type: query
+    disabled: true
+  - name: sortingRules
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nGet a list of Relationships based in the filters sent\n\n## Description\n\
+  `min ref 2024-10 (90.46)`\n\n## Parameters\n\n- **relationshipNumbers** (query)\
+  \ : A list of relationship numbers (Maximum 50)\n- **relationshipIds** (query) :\
+  \ A list of relationships ids (Maximum 50)\n- **investmentAdvisorCodes** (query)\
+  \ : A list of advisors codes (Maximum 50)\n- **relationshipCurrency** (query) :\
+  \ The relationship currency (CAD or USD)\n- **shortName** (query) : The Short Name\n\
+  - **relationshipTypeDescription** (query) : The type of relationship (Family, Special\
+  \ Relation, Composite, Household, Client Relationship)\n- **after** (query) : The\
+  \ item id of the first item to be returned in the page when moving forward. \\\r\
+  \nGet this value from the field *Next* of your response\n- **before** (query) :\
+  \ The item id of the last item to be returned in the page when moving backwards.\
+  \ \\\r\nGet this value from the field *Previous* of your response\n- **pageLimit**\
+  \ (query) : The maximun number of items a page should return\n- **sortingRules**\
+  \ (query) : List of properties to sort. \\\r\nUse comma as delimiter and a - sign\
+  \ for descending ( i.e. -LongName ) \\\r\n*Available values*: LongName, Number,\
+  \ InvestmentAdvisorCode, RelationshipCurrency, RelationshipTypeDescription"

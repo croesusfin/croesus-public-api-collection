@@ -1,0 +1,40 @@
+info:
+  name: GainsLossesSummaryByClient
+  type: http
+  seq: 19
+http:
+  method: GET
+  url: '{{Portfolio}}/public/api/v1/clients/:clientId/portfolio/realizedGainLoss/summary'
+  params:
+  - name: clientId
+    value: ''
+    type: path
+  - name: dateType
+    value: ''
+    type: query
+    disabled: true
+  - name: startDate
+    value: ''
+    type: query
+    disabled: true
+  - name: endDate
+    value: ''
+    type: query
+    disabled: true
+  - name: requestedCurrency
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nGet the Gains and Losses for an account\n\n## Description\n`min\
+  \ ref 2026-12 (90.54)`\n\n## Parameters\n\n- **clientId** (path) : \n- **dateType**\
+  \ (query) : One of: Transaction, Settlement. Default: Transaction\n- **startDate**\
+  \ (query) : Start date of the date range. Default: today minus 1 year.\n- **endDate**\
+  \ (query) : End date of the date range. Default: today.\n- **requestedCurrency**\
+  \ (query) : The currency in which to display the results (e.g. CAD, USD)."

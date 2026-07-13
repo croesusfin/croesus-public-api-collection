@@ -1,0 +1,25 @@
+info:
+  name: CreateRelationship
+  type: http
+  seq: 44
+http:
+  method: POST
+  url: '{{Crm}}/public/api/v2/Relationships'
+  params: null
+  body:
+    type: json
+    data: "{\n  \"ShortName\": \"string\",\n  \"LongName\": \"string\",\n  \"InvestmentAdvisorCode\"\
+      : \"string\",\n  \"RelationshipCurrencyCode\": \"string\",\n  \"TypeCode\":\
+      \ 0,\n  \"LanguageCode\": {},\n  \"IsReadOnly\": false,\n  \"IsBillable\": false,\n\
+      \  \"ReviewFrequencyCode\": \"string\"\n}"
+  auth: inherit
+  headers:
+  - name: Content-Type
+    value: application/json
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nCreate a relationship\n\n## Description\n`min ref 2025-12 (90.51)`\r\
+  \n</br>\r\n</br>\r\nCreates a relationship.\n"

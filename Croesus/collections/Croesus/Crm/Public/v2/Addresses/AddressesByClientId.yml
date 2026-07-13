@@ -1,0 +1,32 @@
+info:
+  name: AddressesByClientId
+  type: http
+  seq: 10
+http:
+  method: GET
+  url: '{{Crm}}/public/api/v2/Clients/:clientId/Addresses'
+  params:
+  - name: clientId
+    value: ''
+    type: path
+  - name: mailingAddress
+    value: ''
+    type: query
+    disabled: true
+  - name: sortingRules
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nGet a list of addresses of a client by his identifier\n\n## Description\n\
+  `min ref 2025-08 (90.50)`\n\n## Parameters\n\n- **clientId** (path) : The client\
+  \ identifier\n- **mailingAddress** (query) : \n- **sortingRules** (query) : List\
+  \ of properties to sort. \\\r\nUse comma as delimiter and a - sign for descending\
+  \ ( i.e. -LongName ) \\\r\n*e.g*: LongName, Number, InvestmentAdvisorCode, RelationshipCurrency,\
+  \ RelationshipTypeDescription"

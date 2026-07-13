@@ -1,0 +1,37 @@
+info:
+  name: Model
+  type: http
+  seq: 69
+http:
+  method: PATCH
+  url: '{{Portfolio}}/public/api/v1/models/:modelId'
+  params:
+  - name: modelId
+    value: ''
+    type: path
+  body:
+    type: json
+    data: "[\n  null\n]"
+  auth: inherit
+  headers:
+  - name: Content-Type
+    value: application/json
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: '# Summary
+
+  Updates a model by its unique identifier using a JSON Patch document.
+
+
+  ## Description
+
+  `min ref 2026-12 (90.54)`
+
+
+  ## Parameters
+
+
+  - **modelId** (path) : The unique identifier of the model to update.'

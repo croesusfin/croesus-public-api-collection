@@ -1,0 +1,38 @@
+info:
+  name: ProfilesByRelationshipId
+  type: http
+  seq: 30
+http:
+  method: GET
+  url: '{{Crm}}/public/api/v2/Relationships/:relationshipId/Profiles'
+  params:
+  - name: relationshipId
+    value: ''
+    type: path
+  - name: includeEmptyValues
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: '# Summary
+
+  Get a list of profiles by relationship id
+
+
+  ## Description
+
+  `min ref 2026-04 (90.52)`
+
+
+  ## Parameters
+
+
+  - **relationshipId** (path) : The relationship id to search the profiles
+
+  - **includeEmptyValues** (query) : Whether to include empty values in the profiles'

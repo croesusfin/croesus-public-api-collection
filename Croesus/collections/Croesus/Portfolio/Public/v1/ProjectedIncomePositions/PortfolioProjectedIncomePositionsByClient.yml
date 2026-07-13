@@ -1,0 +1,27 @@
+info:
+  name: PortfolioProjectedIncomePositionsByClient
+  type: http
+  seq: 50
+http:
+  method: GET
+  url: '{{Portfolio}}/public/api/v1/clients/:clientId/portfolio/projectedincome/positions'
+  params:
+  - name: clientId
+    value: ''
+    type: path
+  - name: requestedCurrency
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nGet projected income positions for a given client\n\n## Description\n\
+  `min ref 2025-12 (90.51)`\n\n## Parameters\n\n- **clientId** (path) : The client\
+  \ id\n- **requestedCurrency** (query) : The ISO 4217 currency code (e.g., \"USD\"\
+  , \"EUR\") to use for the projected income positions.  If null, the default\r\n\
+  \            currency will be used."

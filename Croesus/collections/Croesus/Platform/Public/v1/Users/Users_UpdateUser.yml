@@ -1,0 +1,37 @@
+info:
+  name: Users_UpdateUser
+  type: http
+  seq: 6
+http:
+  method: PUT
+  url: '{{Platform}}/plf/scim/v2/Users/:id'
+  params:
+  - name: id
+    value: ''
+    type: path
+  body:
+    type: json
+    data: "{\n  \"schemas\": [\n    \"string\"\n  ],\n  \"id\": \"string\",\n  \"\
+      externalId\": \"string\",\n  \"userName\": \"string\",\n  \"name\": null,\n\
+      \  \"userType\": \"string\",\n  \"preferredLanguage\": \"string\",\n  \"emails\"\
+      : [\n    null\n  ],\n  \"phoneNumbers\": [\n    null\n  ],\n  \"active\": false,\n\
+      \  \"meta\": null,\n  \"urn:ietf:params:scim:schemas:extension:enterprise:2.0:User\"\
+      : null\n}"
+  auth: inherit
+  headers:
+  - name: Content-Type
+    value: application/json
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: '# Summary
+
+  Updates an existing SCIM user by replacing all attributes.
+
+
+  ## Parameters
+
+
+  - **id** (path) : '

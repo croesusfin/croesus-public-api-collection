@@ -1,0 +1,17 @@
+info:
+  name: Currencies
+  type: http
+  seq: 2
+http:
+  method: GET
+  url: '{{Crm}}/public/api/v1/Currencies'
+  params: null
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nGet the list of available currencies\n\n## Description\n`min ref\
+  \ 2025-12 (90.51)`\r\n</br>\r\nGet the list of available currencies\n"

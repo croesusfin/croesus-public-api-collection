@@ -1,0 +1,32 @@
+info:
+  name: Users_CreateUser
+  type: http
+  seq: 1
+http:
+  method: POST
+  url: '{{Platform}}/plf/scim/v2/Users'
+  params: null
+  body:
+    type: json
+    data: "{\n  \"schemas\": [\n    \"string\"\n  ],\n  \"id\": \"string\",\n  \"\
+      externalId\": \"string\",\n  \"userName\": \"string\",\n  \"name\": {\n    \"\
+      familyName\": \"string\",\n    \"givenName\": \"string\"\n  },\n  \"userType\"\
+      : \"string\",\n  \"preferredLanguage\": \"string\",\n  \"emails\": [\n    {\n\
+      \      \"value\": \"string\",\n      \"type\": \"string\"\n    }\n  ],\n  \"\
+      phoneNumbers\": [\n    {\n      \"value\": \"string\"\n    }\n  ],\n  \"active\"\
+      : false,\n  \"meta\": {\n    \"resourceType\": \"string\"\n  },\n  \"urn:ietf:params:scim:schemas:extension:enterprise:2.0:User\"\
+      : {\n    \"division\": \"string\"\n  }\n}"
+  auth: inherit
+  headers:
+  - name: Content-Type
+    value: application/json
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: '# Summary
+
+  Creates a new SCIM user resource.
+
+  '

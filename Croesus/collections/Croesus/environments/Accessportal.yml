@@ -1,0 +1,18 @@
+name: Accessportal
+variables:
+- name: BaseUrl
+  value: https://{{VServer}}.accessproxy.croesus.local
+- name: VServer
+  value: passerelledemo
+- name: Access
+  value: '{{BaseUrl}}/AccessService'
+- name: Auth
+  value: '{{BaseUrl}}/AuthServices'
+- name: Crm
+  value: '{{BaseUrl}}/CrmApplicationService'
+- name: Market
+  value: '{{BaseUrl}}/MarketApplicationService'
+- name: Platform
+  value: '{{BaseUrl}}/PlatformApplicationService'
+- name: Portfolio
+  value: '{{BaseUrl}}/PortfolioApplicationService'

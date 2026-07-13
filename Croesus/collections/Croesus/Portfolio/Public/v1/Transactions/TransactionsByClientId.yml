@@ -1,0 +1,79 @@
+info:
+  name: TransactionsByClientId
+  type: http
+  seq: 67
+http:
+  method: GET
+  url: '{{Portfolio}}/public/api/v1/clients/:clientId/transactions'
+  params:
+  - name: clientId
+    value: ''
+    type: path
+  - name: dateType
+    value: ''
+    type: query
+    disabled: true
+  - name: startDate
+    value: ''
+    type: query
+    disabled: true
+  - name: endDate
+    value: ''
+    type: query
+    disabled: true
+  - name: symbols
+    value: ''
+    type: query
+    disabled: true
+  - name: transactionCurrency
+    value: ''
+    type: query
+    disabled: true
+  - name: typeCodeIds
+    value: ''
+    type: query
+    disabled: true
+  - name: transactionIds
+    value: ''
+    type: query
+    disabled: true
+  - name: sortingRules
+    value: ''
+    type: query
+    disabled: true
+  - name: after
+    value: ''
+    type: query
+    disabled: true
+  - name: before
+    value: ''
+    type: query
+    disabled: true
+  - name: pageLimit
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nGet a list of transactions for a specific client id.\n\n## Description\n\
+  `min ref 2025-12 (90.51)`\n\n## Parameters\n\n- **clientId** (path) : The client\
+  \ id to retrieve the transactions\n- **dateType** (query) : One of: Transaction,\
+  \ Settlement. Default : Transaction\n- **startDate** (query) : Start date of the\
+  \ DateType choosen (yyyy-MM-dd).\n- **endDate** (query) : End date of the DateType\
+  \ choosen (yyyy-MM-dd).\n- **symbols** (query) : A list of Symbol (Maximum 50)\n\
+  - **transactionCurrency** (query) : The currency in which the transaction was made\n\
+  - **typeCodeIds** (query) : Type of transaction\n- **transactionIds** (query) :\
+  \ A list of Transactions ids (Maximum 50)\n- **sortingRules** (query) : List of\
+  \ properties to sort. \\\r\nUse comma as delimiter and a - sign for descending (\
+  \ i.e. -TransactionDate ) \\\r\n*Available values*: ClientLongName, TransactionDate,\
+  \ SettlementDate, AccountNumber, Symbol.\n- **after** (query) : The item id of the\
+  \ first item to be returned in the page when moving forward. \\\r\nGet this value\
+  \ from the field *Next* of your response\n- **before** (query) : The item id of\
+  \ the last item to be returned in the page when moving backwards. \\\r\nGet this\
+  \ value from the field *Previous* of your response\n- **pageLimit** (query) : The\
+  \ maximun number of items a page should return"

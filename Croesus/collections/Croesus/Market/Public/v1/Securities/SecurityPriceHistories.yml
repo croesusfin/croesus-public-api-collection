@@ -1,0 +1,32 @@
+info:
+  name: SecurityPriceHistories
+  type: http
+  seq: 2
+http:
+  method: GET
+  url: '{{Market}}/public/api/v1/securities/:securityId/price-histories'
+  params:
+  - name: securityId
+    value: ''
+    type: path
+  - name: startDate
+    value: ''
+    type: query
+    disabled: true
+  - name: endDate
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nGet the Price Histories for a given security.\n\n## Description\n\
+  `min ref 2026-08 (90.53)`\r\n</br>\r\n</br>\r\n            Get the Price Histories\
+  \ for a given security id. StartDate and EndDate are required, with a maximum range\
+  \ of 1 year.\n\n## Parameters\n\n- **securityId** (path) : A croesus id for the\
+  \ security\n- **startDate** (query) : Start date of the HistoryDate (yyyy-MM-dd).\n\
+  - **endDate** (query) : End date of the HistoryDate (yyyy-MM-dd)."

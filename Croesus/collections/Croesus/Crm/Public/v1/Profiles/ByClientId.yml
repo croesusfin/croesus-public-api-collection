@@ -1,0 +1,29 @@
+info:
+  name: ByClientId
+  type: http
+  seq: 10
+http:
+  method: PATCH
+  url: '{{Crm}}/public/api/v1/clients/:clientId/profiles/bulk'
+  params:
+  - name: clientId
+    value: ''
+    type: path
+  body:
+    type: json
+    data: "[\n  null\n]"
+  auth: inherit
+  headers:
+  - name: Content-Type
+    value: application/json
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nUpdate the value of one or more profile values for a given client.\n\
+  \n## Description\n`min ref 2026-08 (90.53)`\r\n</br>\r\n</br>\r\n            Update\
+  \ the value of one or more profile values for a given client.The\r\n           \
+  \ profile values are identified by their ProfileId.The profile values are\r\n  \
+  \          updated in bulk.\n\n## Parameters\n\n- **clientId** (path) : A single\
+  \ client id"

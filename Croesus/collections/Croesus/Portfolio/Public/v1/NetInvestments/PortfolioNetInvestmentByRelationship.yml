@@ -1,0 +1,34 @@
+info:
+  name: PortfolioNetInvestmentByRelationship
+  type: http
+  seq: 26
+http:
+  method: GET
+  url: '{{Portfolio}}/public/api/v1/relationships/:relationshipId/portfolio/netinvestment'
+  params:
+  - name: relationshipId
+    value: ''
+    type: path
+  - name: portfolioDate
+    value: ''
+    type: query
+    disabled: true
+  - name: considerManagementStartDate
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nRetrieves the net investment details for a specific relationship\
+  \ within a portfolio.\n\n## Description\n`min ref 2025-08 (90.51)`\r\n         \
+  \   This method requires authorization to read portfolio data. Ensure the caller\
+  \ has the\r\n            appropriate permissions.\n\n## Parameters\n\n- **relationshipId**\
+  \ (path) : The unique identifier of the relationship for which net investment details\
+  \ are requested. Must be a positive\r\n            integer.\n- **portfolioDate**\
+  \ (query) : The date to use for the portfolio summary calculation\n- **considerManagementStartDate**\
+  \ (query) : If false, start date will be account inception date."

@@ -1,0 +1,32 @@
+info:
+  name: AddressesByRelationshipId
+  type: http
+  seq: 11
+http:
+  method: GET
+  url: '{{Crm}}/public/api/v2/Relationships/:relationshipId/Addresses'
+  params:
+  - name: relationshipId
+    value: ''
+    type: path
+  - name: mailingAddress
+    value: ''
+    type: query
+    disabled: true
+  - name: sortingRules
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nGet a list of addresses of a relationship by his identifier\n\n\
+  ## Description\n`min ref 2025-08 (90.50)`\n\n## Parameters\n\n- **relationshipId**\
+  \ (path) : The relationship identifier\n- **mailingAddress** (query) : \n- **sortingRules**\
+  \ (query) : List of properties to sort. \\\r\nUse comma as delimiter and a - sign\
+  \ for descending ( i.e. -LongName ) \\\r\n*e.g*: LongName, Number, InvestmentAdvisorCode,\
+  \ RelationshipCurrency, RelationshipTypeDescription"

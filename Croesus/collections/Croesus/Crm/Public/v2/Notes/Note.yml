@@ -1,0 +1,44 @@
+info:
+  name: Note
+  type: http
+  seq: 46
+http:
+  method: POST
+  url: '{{Crm}}/public/api/v2/:contextType/:contextId/Notes'
+  params:
+  - name: contextType
+    value: ''
+    type: path
+  - name: contextId
+    value: ''
+    type: path
+  body:
+    type: json
+    data: "{\n  \"Comment\": \"string\",\n  \"DateEffective\": \"string\",\n  \"IsReview\"\
+      : false\n}"
+  auth: inherit
+  headers:
+  - name: Content-Type
+    value: application/json
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: '# Summary
+
+  Create a note for a given parent context id
+
+
+  ## Description
+
+  `min ref 2024-08 (90.45)`
+
+
+  ## Parameters
+
+
+  - **contextType** (path) : The context type of the context id passed as parameter.
+
+  - **contextId** (path) : The api will search only for the notes owned by this context
+  type'

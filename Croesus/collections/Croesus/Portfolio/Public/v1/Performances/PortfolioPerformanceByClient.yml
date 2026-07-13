@@ -1,0 +1,63 @@
+info:
+  name: PortfolioPerformanceByClient
+  type: http
+  seq: 32
+http:
+  method: GET
+  url: '{{Portfolio}}/public/api/v1/clients/:clientId/portfolio/performances'
+  params:
+  - name: clientId
+    value: ''
+    type: path
+  - name: calculationMethod
+    value: ''
+    type: query
+    disabled: true
+  - name: cumulativePeriods
+    value: ''
+    type: query
+    disabled: true
+  - name: fixedPeriods
+    value: ''
+    type: query
+    disabled: true
+  - name: requestedCurrency
+    value: ''
+    type: query
+    disabled: true
+  - name: considerManagementStartDate
+    value: ''
+    type: query
+    disabled: true
+  - name: includeInflowOutflowRevenue
+    value: ''
+    type: query
+    disabled: true
+  - name: includeNonAnnualizedValues
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: "# Summary\nRetrieves the portfolio performance data for a specific client.\n\
+  \n## Description\n`min ref 2025.12 (90.51)`\n\n## Parameters\n\n- **clientId** (path)\
+  \ : The unique identifier of the client whose portfolio performance is being requested.\n\
+  - **calculationMethod** (query) : Choice of One or multiple: NetROI, GrossROI, NetIRR\n\
+  - **cumulativePeriods** (query) : List of cumulative period to get the performance.\r\
+  \nThe period represent months : 3, 6, 9 etc...\r\nCan not be used with FixedPeriods\r\
+  \nDefault: YTD (Year To Date)\n- **fixedPeriods** (query) : List of fixed periods\
+  \ to get the performance.\r\nThe period represent year : 2010, 2009, 2008 etc...\r\
+  \nCan not be used with CumulativePeriods\r\nDefault: YTD (Year To Date)\n- **requestedCurrency**\
+  \ (query) : Currency of the performance. Default is the currency of the account.\n\
+  - **considerManagementStartDate** (query) : Gets or sets a value indicating whether\
+  \ the Croesus pref which allows all calculations to begin from a certain date set\
+  \ in the UI is used or not.\r\noperations.\n- **includeInflowOutflowRevenue** (query)\
+  \ : Gets or sets a value indicating whether to include inflow, outflow, and revenue\
+  \ in the performance calculation.\n- **includeNonAnnualizedValues** (query) : Gets\
+  \ or sets a value indicating whether to include non-annualized values in the performance\
+  \ calculation."

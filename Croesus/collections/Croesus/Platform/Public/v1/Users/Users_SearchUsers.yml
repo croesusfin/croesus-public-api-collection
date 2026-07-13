@@ -1,0 +1,28 @@
+info:
+  name: Users_SearchUsers
+  type: http
+  seq: 5
+http:
+  method: POST
+  url: '{{Platform}}/plf/scim/v2/Users/.search'
+  params: null
+  body:
+    type: json
+    data: "{\n  \"schemas\": [\n    \"string\"\n  ],\n  \"attributes\": [\n    \"\
+      string\"\n  ],\n  \"excludedAttributes\": [\n    \"string\"\n  ],\n  \"filter\"\
+      : \"string\",\n  \"sortBy\": \"string\",\n  \"sortOrder\": \"string\",\n  \"\
+      startIndex\": 0,\n  \"count\": 0\n}"
+  auth: inherit
+  headers:
+  - name: Content-Type
+    value: application/json
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: '# Summary
+
+  Searches for SCIM users using POST with search request body.
+
+  '

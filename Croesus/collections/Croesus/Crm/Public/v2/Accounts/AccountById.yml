@@ -1,0 +1,38 @@
+info:
+  name: AccountById
+  type: http
+  seq: 5
+http:
+  method: PUT
+  url: '{{Crm}}/public/api/v2/Accounts/:accountId'
+  params:
+  - name: accountId
+    value: ''
+    type: path
+  - name: requestedCurrency
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: '# Summary
+
+  Get an account by it''s id
+
+
+  ## Description
+
+  `min ref 2024-10 (90.46)`
+
+
+  ## Parameters
+
+
+  - **accountId** (path) : The account id to retrieve the account
+
+  - **requestedCurrency** (query) : The Currency requested for display'

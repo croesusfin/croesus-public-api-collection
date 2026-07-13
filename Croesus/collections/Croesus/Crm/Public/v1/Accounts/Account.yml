@@ -1,0 +1,33 @@
+info:
+  name: Account
+  type: http
+  seq: 1
+http:
+  method: POST
+  url: '{{Crm}}/public/api/v1/Accounts'
+  params: null
+  body:
+    type: json
+    data: "{\n  \"ClientId\": 0,\n  \"AccountNumber\": \"string\",\n  \"LongName\"\
+      : \"string\",\n  \"ShortName\": \"string\",\n  \"InvestmentAdvisorCode\": \"\
+      string\",\n  \"AccountCurrency\": \"string\",\n  \"TypeIndexNo\": 0,\n  \"SubTypeIndexNo\"\
+      : 0,\n  \"Code\": \"string\",\n  \"IsBusinessAccount\": false\n}"
+  auth: inherit
+  headers:
+  - name: Content-Type
+    value: application/json
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: '# Summary
+
+  Create a new account
+
+
+  ## Description
+
+  `min ref 2026-04 (90.52)`
+
+  '

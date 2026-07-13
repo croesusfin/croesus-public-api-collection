@@ -1,0 +1,38 @@
+info:
+  name: ProfilesByAccountId
+  type: http
+  seq: 28
+http:
+  method: GET
+  url: '{{Crm}}/public/api/v2/Accounts/:accountId/Profiles'
+  params:
+  - name: accountId
+    value: ''
+    type: path
+  - name: includeEmptyValues
+    value: ''
+    type: query
+    disabled: true
+  body: null
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+docs: '# Summary
+
+  Get a list of profiles by account id
+
+
+  ## Description
+
+  `min ref 2026-04 (90.52)`
+
+
+  ## Parameters
+
+
+  - **accountId** (path) : The account id to search the profiles
+
+  - **includeEmptyValues** (query) : Whether to include empty values in the profiles'
